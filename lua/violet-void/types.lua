@@ -1,0 +1,98 @@
+---@class Palette
+---@field bg string
+---@field bg_dark string
+---@field bg_dark1 string
+---@field bg_highlight string
+---@field blue string
+---@field blue0 string
+---@field blue1 string
+---@field blue2 string
+---@field blue5 string
+---@field blue6 string
+---@field blue7 string
+---@field comment string
+---@field cyan string
+---@field dark3 string
+---@field dark5 string
+---@field fg string
+---@field fg_dark string
+---@field fg_gutter string
+---@field green string
+---@field green1 string
+---@field green2 string
+---@field magenta string
+---@field magenta2 string
+---@field orange string
+---@field purple string
+---@field red string
+---@field red1 string
+---@field terminal_black string
+---@field teal string
+---@field yellow string
+---@field git {add: string, change: string, delete: string, [string]: any}
+
+---@class VioletVoid.Config
+---@field style? string
+---@field light_style? string
+---@field transparent? boolean
+---@field terminal_colors? boolean
+---@field styles? table
+---@field dim_inactive? boolean
+---@field lualine_bold? boolean
+---@field day_brightness? number
+---@field on_colors? fun(colors: ColorScheme)
+---@field on_highlights? fun(highlights: VioletVoid.Highlights, colors: ColorScheme)
+---@field cache? boolean
+---@field plugins? table
+
+---@class violet-void.Highlight: vim.api.keyset.highlight
+---@field style? vim.api.keyset.highlight
+
+---@alias violet-void.Highlights table<string,violet-void.Highlight|string>
+---@alias VioletVoid.Highlights violet-void.Highlights
+
+---@alias violet-void.HighlightsFn fun(colors: ColorScheme, opts:VioletVoid.Config):violet-void.Highlights
+
+---@class violet-void.TerminalPalette
+---@field black string
+---@field black_bright string
+---@field red string
+---@field red_bright string
+---@field green string
+---@field green_bright string
+---@field yellow string
+---@field yellow_bright string
+---@field blue string
+---@field blue_bright string
+---@field magenta string
+---@field magenta_bright string
+---@field cyan string
+---@field cyan_bright string
+---@field white string
+---@field white_bright string
+
+---@class ColorScheme: Palette
+---@field none string
+---@field diff {add: string, delete: string, change: string, text: string}
+---@field black string
+---@field border_highlight string
+---@field border string
+---@field bg_popup string
+---@field bg_statusline string
+---@field bg_sidebar string
+---@field bg_float string
+---@field bg_visual string
+---@field bg_search string
+---@field fg_sidebar string
+---@field fg_float string
+---@field error string
+---@field todo string
+---@field warning string
+---@field info string
+---@field hint string
+---@field rainbow string[]
+---@field terminal violet-void.TerminalPalette
+
+---@class violet-void.Cache
+---@field groups violet-void.Highlights
+---@field inputs table

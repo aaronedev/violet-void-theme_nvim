@@ -1,0 +1,20 @@
+# Compiled Lua
+*.luac
+luac.out
+
+# LSP cache
+.luacheckcache
+
+# Test files
+*_test.lua
+test/
+tests/
+
+# Editor
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
