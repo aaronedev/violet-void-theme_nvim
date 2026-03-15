@@ -8,7 +8,6 @@ luac.out
 # Test files
 *_test.lua
 test/
-tests/
 
 # Editor
 *.swp

@@ -24,7 +24,7 @@ function M.get(c)
     TSKeywordFunction  = { fg = c.magenta },
     TSKeywordOperator  = { fg = c.red1 },
     TSKeywordReturn    = { fg = c.magenta },
-    TSComment          = { fg = c.comment, style = c.styles.comments },
+    TSComment          = { fg = c.comment },
     TSNote             = { fg = c.green },
     TSWarning          = { fg = c.yellow },
     TSDanger           = { fg = c.red },
