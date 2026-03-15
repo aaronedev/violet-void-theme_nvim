@@ -27,7 +27,7 @@
   - [x] typescript-tools.nvim - a421308
   - [x] rust-tools.nvim - a421308
   - [x] go.nvim - a421308
-  - [x] toggleterm.nvim - 
+  - [x] toggleterm.nvim - f293940
 
 ### Testing
 
