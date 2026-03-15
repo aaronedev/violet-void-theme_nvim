@@ -21,7 +21,7 @@
   - [x] neoconf.nvim - c9cd69f
   - [x] telescope-file-browser.nvim - b3a71a7
   - [ ] harpoon
-  - [x] refactoring.nvim - 
+  - [x] refactoring.nvim - 58f6597
   - [x] spectre.nvim - e825dd4
   - [x] inc-rename.nvim
   - [ ] typescript-tools.nvim
