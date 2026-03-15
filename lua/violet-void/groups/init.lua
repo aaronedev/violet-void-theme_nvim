@@ -63,6 +63,7 @@ M.plugins = {
   ["nvim-treesitter-context"]       = "treesitter-context",
   ["octo.nvim"]                     = "octo",
   ["rainbow-delimiters.nvim"]       = "rainbow",
+  ["refactoring.nvim"]               = "refactoring",
   ["render-markdown.nvim"]          = "render-markdown",
   ["snacks.nvim"]                   = "snacks",
   ["spectre.nvim"]                  = "spectre",
