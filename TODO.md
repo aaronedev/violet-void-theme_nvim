@@ -23,7 +23,7 @@
   - [ ] harpoon
   - [ ] refactoring.nvim
   - [ ] spectre.nvim
-  - [ ] inc-rename.nvim
+  - [x] inc-rename.nvim
   - [ ] typescript-tools.nvim
   - [ ] rust-tools.nvim
   - [ ] go.nvim

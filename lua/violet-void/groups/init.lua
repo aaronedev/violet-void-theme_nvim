@@ -23,6 +23,7 @@ M.plugins = {
   ["hop.nvim"]                      = "hop",
   ["indent-blankline.nvim"]         = "indent-blankline",
   ["indentmini.nvim"]               = "indentmini",
+  ["inc-rename.nvim"]               = "inc-rename",
   ["lazy.nvim"]                     = "lazy",
   ["lazygit.nvim"]                  = "lazygit",
   ["leap.nvim"]                     = "leap",
