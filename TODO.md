@@ -18,7 +18,7 @@
 ### Plugin Support
 
 - [ ] Add missing popular plugins:
-  - [ ] neoconf.nvim
+  - [x] neoconf.nvim - c9cd69f
   - [ ] telescope-file-browser.nvim
   - [ ] harpoon
   - [ ] refactoring.nvim
