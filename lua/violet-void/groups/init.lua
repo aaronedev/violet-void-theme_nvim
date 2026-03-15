@@ -65,6 +65,7 @@ M.plugins = {
   ["rainbow-delimiters.nvim"]       = "rainbow",
   ["render-markdown.nvim"]          = "render-markdown",
   ["snacks.nvim"]                   = "snacks",
+  ["spectre.nvim"]                  = "spectre",
   ["supermaven-nvim"]               = "supermaven",
   ["telescope-file-browser.nvim"] = "telescope-file-browser",
   ["telescope.nvim"]                = "telescope",
