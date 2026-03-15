@@ -72,6 +72,7 @@ M.plugins = {
   ["supermaven-nvim"]               = "supermaven",
   ["telescope-file-browser.nvim"] = "telescope-file-browser",
   ["telescope.nvim"]                = "telescope",
+  ["toggleterm.nvim"]               = "toggleterm",
   ["typescript-tools.nvim"]        = "typescript-tools",
   ["trouble.nvim"]                  = "trouble",
   ["vim-gitgutter"]                 = "gitgutter",
