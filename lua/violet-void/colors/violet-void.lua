@@ -25,6 +25,13 @@ return {
   magenta2 = "#fd0098", -- color 13
   orange = "#ff7c7e",
   purple = "#bb7cff",
+  purple1 = "#9d5cff", -- deeper purple
+  purple2 = "#c490ff", -- lighter lavender purple
+  purple3 = "#7b4dff", -- vibrant violet
+  purple4 = "#e6d6ff", -- pale lavender
+  violet = "#8b5cf6", -- violet blue
+  violet1 = "#a78bfa", -- light violet
+  lavender = "#e0d6ff", -- very light purple
   red = "#ff004b", -- red bright
   red1 = "#ff1a67", -- red normal
   terminal_black = "#181818",

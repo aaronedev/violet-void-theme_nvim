@@ -58,5 +58,14 @@ return function(opts)
   colors.base0E = colors.purple    -- Purple
   colors.base0F = colors.magenta   -- Magenta
 
+  -- Extended purple/violet palette for light theme
+  colors.purple1 = "#7c4dff"  -- deeper purple
+  colors.purple2 = "#b388ff"  -- lighter lavender purple
+  colors.purple3 = "#651fff" -- vibrant violet
+  colors.purple4 = "#ede7f6"  -- pale lavender
+  colors.violet = "#7c3aed"  -- violet blue
+  colors.violet1 = "#a78bfa" -- light violet
+  colors.lavender = "#ede7f6" -- very light purple
+
   return colors
 end
