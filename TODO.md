@@ -20,13 +20,13 @@
 - [ ] Add missing popular plugins:
   - [x] neoconf.nvim - c9cd69f
   - [x] telescope-file-browser.nvim - b3a71a7
-  - [ ] harpoon
+  - [x] harpoon - a421308
   - [x] refactoring.nvim - 58f6597
   - [x] spectre.nvim - e825dd4
   - [x] inc-rename.nvim
-  - [ ] typescript-tools.nvim
-  - [ ] rust-tools.nvim
-  - [ ] go.nvim
+  - [x] typescript-tools.nvim - a421308
+  - [x] rust-tools.nvim - a421308
+  - [x] go.nvim - a421308
 
 ### Testing
 
