@@ -37,10 +37,10 @@
 
 ### Features
 
-- [ ] Add more configuration options:
-  - [ ] `styles.boolean = { bold = true }`
-  - [ ] `styles.functions = { italic = true }`
-  - [ ] `styles.variables = {}`
+- [x] Add more configuration options:
+  - [x] `styles.boolean = { bold = true }` - 96f1929
+  - [x] `styles.functions = { italic = true }`
+  - [x] `styles.variables = {}`
 - [ ] Add colorblind-friendly variant
 - [ ] Add high-contrast variant for accessibility
 - [ ] Support for custom color overrides per-filetype
