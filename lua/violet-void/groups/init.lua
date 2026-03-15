@@ -65,6 +65,7 @@ M.plugins = {
   ["render-markdown.nvim"]          = "render-markdown",
   ["snacks.nvim"]                   = "snacks",
   ["supermaven-nvim"]               = "supermaven",
+  ["telescope-file-browser.nvim"] = "telescope-file-browser",
   ["telescope.nvim"]                = "telescope",
   ["trouble.nvim"]                  = "trouble",
   ["vim-gitgutter"]                 = "gitgutter",
