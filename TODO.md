@@ -2,7 +2,7 @@
 
 ## Immediate
 
-- [ ] Fix Base16 color naming in colors/init.lua (audit shows base00-base0F missing)
+- [x] Fix Base16 color naming in colors/init.lua (audit shows base00-base0F missing) - 9ae4e55
 - [ ] Test theme with all 70+ supported plugins
 - [ ] Add contrast checking utility function in audit.lua
 
