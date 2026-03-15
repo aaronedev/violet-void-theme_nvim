@@ -13,7 +13,7 @@
 - [ ] Ensure violet-void (dark) has proper contrast ratios
 - [ ] Verify void-light (light) meets WCAG AA (4.5:1)
 - [ ] Add more violet/purple accent colors
-- [ ] Document color usage in colors/README.md
+- [x] Document color usage in colors/README.md - bb2f2cf
 
 ### Plugin Support
 
