@@ -86,6 +86,7 @@ function M.get(c, opts)
     Bold                        = { bold = true, fg = c.fg }, -- (preferred) any bold text
     Character                   = { fg = c.green }, --  a character constant: 'c', '\n'
     Constant                    = { fg = c.orange }, -- (preferred) any constant
+    Boolean                     = { fg = c.purple, style = opts.styles.booleans }, -- a boolean constant: TRUE, false
     Debug                       = { fg = c.orange }, --    debugging statements
     Delimiter                   =  "Special", --  character that needs attention
     Error                       = { fg = c.error }, -- (preferred) any erroneous construct

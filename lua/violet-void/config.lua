@@ -18,6 +18,7 @@ M.defaults = {
     keywords = { italic = true },
     functions = {},
     variables = {},
+    booleans = {},
     -- Background styles. Can be "dark", "transparent" or "normal"
     sidebars = "normal", -- style for sidebars, see below
     floats = "normal", -- style for floating windows
