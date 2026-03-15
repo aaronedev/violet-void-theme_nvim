@@ -35,4 +35,22 @@ return {
     change = "#004f4d",
     delete = "#4f0017",
   },
+
+  -- Base16 color names for compatibility
+  base00 = "#0f0f0f", -- Default Background
+  base01 = "#0e0e0e", -- Lighter Background (statusline)
+  base02 = "#1b1b1b", -- Selection Background
+  base03 = "#4c4c4c", -- Comments, Invisibles
+  base04 = "#303030", -- Dark Foreground (statusbar)
+  base05 = "#f0f0f5", -- Default Foreground
+  base06 = "#f0f0f5", -- Light Foreground (unused)
+  base07 = "#ffffff", -- Lightest Foreground (unused)
+  base08 = "#ff004b", -- Red
+  base09 = "#ff7c7e", -- Orange
+  base0A = "#7c60d1", -- Yellow (using violet instead of yellow for theme identity)
+  base0B = "#42ff97", -- Green
+  base0C = "#00fff9", -- Cyan
+  base0D = "#29adff", -- Blue
+  base0E = "#bb7cff", -- Purple
+  base0F = "#fd7cff", -- Magenta
 }

@@ -40,5 +40,23 @@ return function(opts)
     colors.git = git_colors
   end
 
+  -- Base16 color names for compatibility (inverted for light theme)
+  colors.base00 = colors.bg       -- Default Background
+  colors.base01 = colors.bg_dark   -- Lighter Background
+  colors.base02 = colors.bg_dark1  -- Selection Background
+  colors.base03 = colors.comment   -- Comments, Invisibles
+  colors.base04 = colors.fg_dark    -- Dark Foreground
+  colors.base05 = colors.fg        -- Default Foreground
+  colors.base06 = "#52525b"        -- Light Foreground
+  colors.base07 = "#3f3f46"        -- Lightest Foreground
+  colors.base08 = colors.red       -- Red (inverted)
+  colors.base09 = colors.orange    -- Orange
+  colors.base0A = colors.yellow    -- Yellow (using violet for identity)
+  colors.base0B = colors.green     -- Green (inverted)
+  colors.base0C = colors.cyan      -- Cyan (inverted)
+  colors.base0D = colors.blue       -- Blue (inverted)
+  colors.base0E = colors.purple    -- Purple
+  colors.base0F = colors.magenta   -- Magenta
+
   return colors
 end
