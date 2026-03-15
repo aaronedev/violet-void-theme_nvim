@@ -49,6 +49,7 @@ M.plugins = {
   ["mini.test"]                     = "mini_test",
   ["mini.trailspace"]               = "mini_trailspace",
   ["neo-tree.nvim"]                 = "neo-tree",
+  ["neoconf.nvim"]                  = "neoconf",
   ["neogit"]                        = "neogit",
   ["neotest"]                       = "neotest",
   ["noice.nvim"]                    = "noice",
