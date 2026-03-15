@@ -19,7 +19,7 @@
 
 - [ ] Add missing popular plugins:
   - [x] neoconf.nvim - c9cd69f
-  - [ ] telescope-file-browser.nvim
+  - [x] telescope-file-browser.nvim - b3a71a7
   - [ ] harpoon
   - [ ] refactoring.nvim
   - [ ] spectre.nvim
