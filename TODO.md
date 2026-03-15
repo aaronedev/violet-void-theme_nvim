@@ -22,7 +22,7 @@
   - [x] telescope-file-browser.nvim - b3a71a7
   - [ ] harpoon
   - [ ] refactoring.nvim
-  - [ ] spectre.nvim
+  - [x] spectre.nvim - e825dd4
   - [x] inc-rename.nvim
   - [ ] typescript-tools.nvim
   - [ ] rust-tools.nvim
