@@ -70,6 +70,133 @@ require("violet-void").load({
 })
 ```
 
+### Configuration Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `style` | `string` | `"violet-void"` | Theme variant: `"violet-void"` (dark) or `"void-light"` (light) |
+| `light_style` | `string` | `"void-light"` | Fallback style when background is light |
+| `transparent` | `boolean` | `false` | Enable transparent background |
+| `terminal_colors` | `boolean` | `true` | Configure terminal colors for `:terminal` |
+| `day_brightness` | `number` | `1` | Brightness adjustment for light style (0-1) |
+| `dim_inactive` | `boolean` | `false` | Dim inactive windows |
+| `lualine_bold` | `boolean` | `true` | Use bold headers in lualine theme |
+| `cache` | `boolean` | `true` | Cache theme for faster loading |
+| `terminal` | `boolean` | - | Alias for `terminal_colors` |
+
+### Style Options
+
+Customize syntax highlighting styles:
+
+```lua
+styles = {
+  comments = { italic = true, bold = false },
+  keywords = { italic = true, bold = false },
+  functions = { italic = false, bold = false },
+  variables = { italic = false, bold = false },
+  booleans = { italic = false, bold = false },
+  sidebars = "normal",  -- "dark", "transparent", or "normal"
+  floats = "normal",    -- "dark", "transparent", or "normal"
+}
+```
+
+### Plugin Management
+
+Control which plugins get highlight groups:
+
+```lua
+plugins = {
+  all = true,           -- Enable all plugins (when not using lazy.nvim)
+  auto = true,          -- Auto-detect plugins via lazy.nvim
+  -- Or specify individual plugins:
+  telescope = true,
+  gitsigns = true,
+  -- Disable specific plugins:
+  neo-tree = false,
+}
+```
+
+### Custom Colors
+
+Override colors using `on_colors`:
+
+```lua
+on_colors = function(colors)
+  colors.bg = "#0d0d1a"
+  colors.fg = "#c8c8e8"
+  colors.purple = "#7c3aed"
+end,
+```
+
+### Custom Highlights
+
+Override highlight groups using `on_highlights`:
+
+```lua
+on_highlights = function(highlights, colors)
+  highlights.Comment = { fg = colors.comments, style = { italic = true } }
+  highlights.Function = { fg = colors.purple, bold = true }
+end,
+```
+
+### Filetype-Specific Overrides
+
+Apply different highlights per file type:
+
+```lua
+filetypes = {
+  python = {
+    Function = { fg = "#ff0000" },
+    Comment = { fg = "#00ff00" },
+  },
+  javascript = {
+    -- JavaScript-specific overrides
+  },
+}
+```
+
+### Loading the Theme
+
+```lua
+-- Basic usage
+require("violet-void").load()
+
+-- With configuration
+require("violet-void").load({
+  style = "violet-void",
+  transparent = true,
+  styles = {
+    comments = { italic = true },
+  },
+})
+
+-- Or use setup() then load()
+require("violet-void").setup({
+  -- config options
+})
+vim.cmd.colorscheme("violet-void")
+```
+
+### Commands
+
+- `:VioletHarmony [type]` - Get color harmonies. Types: `all`, `complement`, `split_complementary`, `triadic`, `analogous`, `monochromatic`, `tetradic`
+- `:VioletCacheClear` - Clear the theme cache
+
+### Terminal Colors
+
+When enabled, the theme configures these terminal colors:
+
+| Index | Color | Bright |
+|-------|-------|--------|
+| 0 | Black | 8 |
+| 1 | Red | 9 |
+| 2 | Green | 10 |
+| 3 | Yellow | 11 |
+| 4 | Blue | 12 |
+| 5 | Magenta | 13 |
+| 6 | Cyan | 14 |
+| 7 | White | 15 |
+
 ## Supported Plugins
 
 <details>

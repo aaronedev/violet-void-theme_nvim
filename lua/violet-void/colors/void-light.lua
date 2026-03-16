@@ -22,8 +22,8 @@ return function(opts)
   colors.fg_dark = "#52525b" -- Slightly lighter dark text
   colors.fg_gutter = "#9ca0a5" -- Gutter text
 
-  -- Comments should be subtle but readable
-  colors.comment = "#9ca0a5"
+  -- Comments should be subtle but readable (WCAG 3:1 minimum for incidental text)
+  colors.comment = "#707070"
 
   -- Terminal black for light theme
   colors.terminal_black = "#b4b5ba"
