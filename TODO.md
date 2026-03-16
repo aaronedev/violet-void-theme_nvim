@@ -32,7 +32,7 @@
 ### Testing
 
 - [x] Add automated tests using plenary.nvim
-- [ ] Create visual regression test script
+- [x] Create visual regression test script - 054ce94
 - [x] Add CI workflow specific to nvim theme - 2b57a4d
 - [ ] Test on Neovim 0.9, 0.10, nightly
 
