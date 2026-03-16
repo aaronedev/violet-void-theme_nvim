@@ -24,4 +24,16 @@ end
 
 M.setup = config.setup
 
+-- Expose profiling API
+M.profile = {
+  --- Enable or disable profiling
+  set_enabled = function(enabled)
+    require("violet-void.theme").set_profile(enabled)
+  end,
+  --- Get profiling results
+  get_timings = function()
+    return require("violet-void.theme").get_profile()
+  end,
+}
+
 return M

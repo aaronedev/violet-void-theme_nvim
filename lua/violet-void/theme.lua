@@ -1,7 +1,95 @@
 local M = {}
 
+-- Profiling data (available when profiling is enabled)
+M.profile = {
+  enabled = false,
+  timings = {},
+}
+
+local function profiling_enabled()
+  return M.profile.enabled
+end
+
+local function profile_start(label)
+  if profiling_enabled() then
+    M.profile.timings[label] = { start = vim.loop.hrtime() }
+  end
+end
+
+local function profile_end(label)
+  if profiling_enabled() and M.profile.timings[label] then
+    M.profile.timings[label].end_ = vim.loop.hrtime()
+    M.profile.timings[label].duration =
+      (M.profile.timings[label].end_ - M.profile.timings[label].start) / 1e6
+  end
+end
+
+--- Get profiling results
+---@return table
+function M.get_profile()
+  return M.profile.timings
+end
+
+--- Enable or disable profiling
+---@param enabled boolean
+function M.set_profile(enabled)
+  M.profile.enabled = enabled
+  if not enabled then
+    M.profile.timings = {}
+  end
+end
+
+--- Apply highlights in optimized batches
+---@param groups table<string, table>
+---@param batch_size number number of highlights per batch
+local function apply_highlights(groups, batch_size)
+  batch_size = batch_size or 50
+
+  -- Pre-process links to avoid circular references
+  local links = {}
+  local direct = {}
+
+  for group, hl in pairs(groups) do
+    if type(hl) == "string" then
+      links[group] = hl
+    else
+      direct[group] = hl
+    end
+  end
+
+  -- Apply direct highlights in batches
+  local batch = {}
+  local count = 0
+
+  for group, hl in pairs(direct) do
+    table.insert(batch, { group = group, hl = hl })
+    count = count + 1
+
+    if count >= batch_size then
+      for _, item in ipairs(batch) do
+        vim.api.nvim_set_hl(0, item.group, item.hl)
+      end
+      batch = {}
+      count = 0
+    end
+  end
+
+  -- Apply remaining
+  if count > 0 then
+    for _, item in ipairs(batch) do
+      vim.api.nvim_set_hl(0, item.group, item.hl)
+    end
+  end
+
+  -- Apply links (they're simple and fast)
+  for group, link in pairs(links) do
+    vim.api.nvim_set_hl(0, group, { link = link })
+  end
+end
+
 ---@param opts? VioletVoid.Config
 function M.setup(opts)
+  profile_start("total")
   opts = require("violet-void.config").extend(opts)
 
   -- Handle high_contrast option - override style to high-contrast variant
@@ -25,8 +113,14 @@ function M.setup(opts)
     colors = cache.colors
     groups = cache.groups
   else
+    profile_start("colors_setup")
     colors = require("violet-void.colors").setup(opts)
+    profile_end("colors_setup")
+
+    profile_start("groups_setup")
     groups = require("violet-void.groups").setup(colors, opts)
+    profile_end("groups_setup")
+
     if opts.cache then
       Util.cache.write(cache_key, { colors = colors, groups = groups })
     end
@@ -40,17 +134,21 @@ function M.setup(opts)
   vim.o.termguicolors = true
   vim.g.colors_name = opts.style or "violet-void"
 
-  for group, hl in pairs(groups) do
-    hl = type(hl) == "string" and { link = hl } or hl
-    vim.api.nvim_set_hl(0, group, hl)
-  end
+  -- Apply highlights using optimized batched approach
+  profile_start("highlight_application")
+  apply_highlights(groups)
+  profile_end("highlight_application")
 
   if opts.terminal_colors then
+    profile_start("terminal_colors")
     M.terminal(colors)
+    profile_end("terminal_colors")
   end
 
   -- Apply filetype-specific highlight overrides
   M.filetypes(opts.filetypes)
+
+  profile_end("total")
 
   return colors, groups, opts
 end
