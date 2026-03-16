@@ -12,7 +12,7 @@
 
 - [x] Ensure violet-void (dark) has proper contrast ratios - 1ac2b12
 - [x] Verify void-light (light) meets WCAG AA (4.5:1) - 1ac2b12
-- [ ] Add more violet/purple accent colors - 4aed211
+- [x] Add more violet/purple accent colors - 4aed211
 - [x] Document color usage in colors/README.md - bb2f2cf
 
 ### Plugin Support
@@ -50,7 +50,7 @@
 
 - [ ] Add screenshots to README
 - [x] Document all configuration options - e35d75a
-- [ ] Add migration guide from other colorschemes
+- [x] Add migration guide from other colorschemes
 - [ ] Create demo video/gifs
 
 ### Performance
