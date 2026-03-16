@@ -54,7 +54,9 @@ function M.setup(opts)
     or opts.styles.floats == "dark" and colors.bg_dark
     or colors.bg_popup
 
-  colors.bg_visual = Util.blend_bg(colors.yellow, 0.55)
+  -- Use different blend color for light theme to ensure WCAG AA contrast
+  local visual_blend_color = opts.style == "void-light" and colors.purple3 or colors.yellow
+  colors.bg_visual = Util.blend_bg(visual_blend_color, 0.55)
   colors.bg_search = Util.blend_bg(colors.blue7, 0.14)
   colors.fg_sidebar = colors.fg_dark
   colors.fg_float = colors.fg

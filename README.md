@@ -74,7 +74,7 @@ require("violet-void").load({
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `style` | `string` | `"violet-void"` | Theme variant: `"violet-void"` (dark), `"void-light"` (light), or `"violet-void-high-contrast"` |
+| `style` | `string` | `"violet-void"` | Theme variant: `"violet-void"` (dark), `"void-light"` (light), `"violet-void-high-contrast"` (accessibility), or `"violet-void-colorblind"` (colorblind-friendly) |
 | `light_style` | `string` | `"void-light"` | Fallback style when background is light |
 | `high_contrast` | `boolean` | `false` | Enable high-contrast variant for accessibility |
 | `transparent` | `boolean` | `false` | Enable transparent background |
@@ -169,6 +169,16 @@ require("violet-void").load({
   styles = {
     comments = { italic = true },
   },
+})
+
+-- Colorblind-friendly variant
+require("violet-void").load({
+  style = "violet-void-colorblind",
+})
+
+-- High-contrast variant
+require("violet-void").load({
+  style = "violet-void-high-contrast",
 })
 
 -- Or use setup() then load()

@@ -22,8 +22,8 @@ return function(opts)
   colors.fg_dark = "#52525b" -- Slightly lighter dark text
   colors.fg_gutter = "#9ca0a5" -- Gutter text
 
-  -- Comments should be subtle but readable (WCAG 3:1 minimum for incidental text)
-  colors.comment = "#707070"
+  -- Comments should be subtle but readable (WCAG 4.5:1 minimum for normal text)
+  colors.comment = "#5a5a5a"
 
   -- Terminal black for light theme
   colors.terminal_black = "#b4b5ba"
@@ -58,13 +58,13 @@ return function(opts)
   colors.base0E = colors.purple    -- Purple
   colors.base0F = colors.magenta   -- Magenta
 
-  -- Extended purple/violet palette for light theme
+  -- Extended purple/violet palette for light theme (with darker purple3 for visual selection)
   colors.purple1 = "#7c4dff"  -- deeper purple
   colors.purple2 = "#b388ff"  -- lighter lavender purple
-  colors.purple3 = "#651fff" -- vibrant violet
+  colors.purple3 = "#302060"  -- very dark purple for visual selection blend
   colors.purple4 = "#ede7f6"  -- pale lavender
-  colors.violet = "#7c3aed"  -- violet blue
-  colors.violet1 = "#a78bfa" -- light violet
+  colors.violet = "#7c3aed"   -- violet blue
+  colors.violet1 = "#a78bfa"  -- light violet
   colors.lavender = "#ede7f6" -- very light purple
 
   return colors
