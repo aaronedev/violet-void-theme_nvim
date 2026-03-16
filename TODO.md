@@ -23,7 +23,7 @@
   - [x] harpoon - a421308
   - [x] refactoring.nvim - 58f6597
   - [x] spectre.nvim - e825dd4
-  - [x] inc-rename.nvim
+  - [x] inc-rename.nvim - 8668317
   - [x] typescript-tools.nvim - a421308
   - [x] rust-tools.nvim - a421308
   - [x] go.nvim - a421308
@@ -44,7 +44,7 @@
   - [x] `styles.variables = {}`
 - [ ] Add colorblind-friendly variant
 - [ ] Add high-contrast variant for accessibility
-- [ ] Support for custom color overrides per-filetype
+- [x] Support for custom color overrides per-filetype - 8668317
 
 ### Documentation
 

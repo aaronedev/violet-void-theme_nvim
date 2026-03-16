@@ -51,6 +51,12 @@ M.defaults = {
     -- for all possible plugins, see:
     -- * violet-void/groups/
   },
+
+  --- Filetype-specific highlight overrides
+  --- Override highlights for specific file types
+  --- Example: filetypes = { python = { Function = { fg = "#ff0000" } } }
+  ---@type table<string, table<string, any>>
+  filetypes = {},
 }
 
 ---@type VioletVoid.Config

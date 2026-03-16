@@ -43,7 +43,42 @@ function M.setup(opts)
     M.terminal(colors)
   end
 
+  -- Apply filetype-specific highlight overrides
+  M.filetypes(opts.filetypes)
+
   return colors, groups, opts
+end
+
+--- Apply filetype-specific highlight overrides
+---@param filetypes table<string, table<string, any>>
+function M.filetypes(filetypes)
+  if not filetypes then
+    return
+  end
+
+  -- Function to apply filetype highlights
+  local apply = function()
+    local buf_ft = vim.bo.filetype
+    local ft_overrides = filetypes[buf_ft]
+    if not ft_overrides then
+      return
+    end
+
+    for group, hl in pairs(ft_overrides) do
+      hl = type(hl) == "string" and { link = hl } or hl
+      vim.api.nvim_set_hl(0, group, hl)
+    end
+  end
+
+  -- Apply for current buffer
+  apply()
+
+  -- Set up autocmd to apply when filetype changes
+  local group = vim.api.nvim_create_augroup("VioletVoidFiletypes", { clear = true })
+  vim.api.nvim_create_autocmd("FileType", {
+    group = group,
+    callback = apply,
+  })
 end
 
 ---@param colors ColorScheme
