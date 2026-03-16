@@ -48,7 +48,7 @@
 
 ### Documentation
 
-- [ ] Add screenshots to README
+- [x] Add screenshots to README - 61e5680
 - [x] Document all configuration options - e35d75a
 - [x] Add migration guide from other colorschemes
 - [ ] Create demo video/gifs
@@ -57,7 +57,7 @@
 
 - [x] Profile theme load time - 0273a07
 - [x] Optimize highlight generation - 0273a07
-- [ ] Consider lazy-loading for rarely-used plugins
+- [ ] Consider lazy-loading for rarely-used plugins - 60dcb26
 
 ## Known Issues
 
