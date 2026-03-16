@@ -3,6 +3,12 @@ local M = {}
 ---@param opts? VioletVoid.Config
 function M.setup(opts)
   opts = require("violet-void.config").extend(opts)
+
+  -- Handle high_contrast option - override style to high-contrast variant
+  if opts.high_contrast then
+    opts.style = "violet-void-high-contrast"
+  end
+
   local Util = require("violet-void.util")
 
   -- Handle stale cache during development/hot-reload

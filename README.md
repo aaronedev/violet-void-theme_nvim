@@ -74,8 +74,9 @@ require("violet-void").load({
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `style` | `string` | `"violet-void"` | Theme variant: `"violet-void"` (dark) or `"void-light"` (light) |
+| `style` | `string` | `"violet-void"` | Theme variant: `"violet-void"` (dark), `"void-light"` (light), or `"violet-void-high-contrast"` |
 | `light_style` | `string` | `"void-light"` | Fallback style when background is light |
+| `high_contrast` | `boolean` | `false` | Enable high-contrast variant for accessibility |
 | `transparent` | `boolean` | `false` | Enable transparent background |
 | `terminal_colors` | `boolean` | `true` | Configure terminal colors for `:terminal` |
 | `day_brightness` | `number` | `1` | Brightness adjustment for light style (0-1) |

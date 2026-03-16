@@ -42,14 +42,14 @@
   - [x] `styles.boolean = { bold = true }` - 96f1929
   - [x] `styles.functions = { italic = true }`
   - [x] `styles.variables = {}`
+- [x] Add high-contrast variant for accessibility
 - [ ] Add colorblind-friendly variant
-- [ ] Add high-contrast variant for accessibility
 - [x] Support for custom color overrides per-filetype - 8668317
 
 ### Documentation
 
 - [ ] Add screenshots to README
-- [ ] Document all configuration options
+- [x] Document all configuration options - e35d75a
 - [ ] Add migration guide from other colorschemes
 - [ ] Create demo video/gifs
 

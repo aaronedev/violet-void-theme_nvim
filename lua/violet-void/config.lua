@@ -6,8 +6,9 @@ M.version = "1.0.0"
 ---@field on_colors fun(colors: ColorScheme)
 ---@field on_highlights fun(highlights: VioletVoid.Highlights, colors: ColorScheme)
 M.defaults = {
-  style = "violet-void", -- The theme comes in many styles: violet-void, void-light (you can add more styles later)
+  style = "violet-void", -- The theme comes in many styles: violet-void, void-light, violet-void-high-contrast (you can add more styles later)
   light_style = "void-light", -- The theme is used when the background is set to light
+  high_contrast = false, -- Enable high-contrast variant for accessibility (uses violet-void-high-contrast style)
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   day_brightness = 1, -- Adjusts the brightness of the colors of the **Light** style. Number between 0 and 1, from dull to vibrant colors
