@@ -55,8 +55,8 @@
 
 ### Performance
 
-- [ ] Profile theme load time
-- [ ] Optimize highlight generation
+- [x] Profile theme load time - 0273a07
+- [x] Optimize highlight generation - 0273a07
 - [ ] Consider lazy-loading for rarely-used plugins
 
 ## Known Issues
