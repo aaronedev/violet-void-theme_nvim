@@ -148,6 +148,9 @@ function M.setup(opts)
   -- Apply filetype-specific highlight overrides
   M.filetypes(opts.filetypes)
 
+  -- Set up lazy loading for plugin highlights
+  M.lazy_load(colors, opts)
+
   profile_end("total")
 
   return colors, groups, opts
@@ -182,6 +185,78 @@ function M.filetypes(filetypes)
   vim.api.nvim_create_autocmd("FileType", {
     group = group,
     callback = apply,
+  })
+end
+
+--- Set up lazy loading for plugin highlights
+--- When enabled, plugin highlights are only applied when the plugin is first loaded
+---@param colors ColorScheme
+---@param opts VioletVoid.Config
+function M.lazy_load(colors, opts)
+  if not opts.plugins.lazy_load then
+    return
+  end
+
+  -- Only works with lazy.nvim
+  if not package.loaded.lazy then
+    vim.notify("lazy_load requires lazy.nvim", vim.log.levels.WARN)
+    return
+  end
+
+  local groups = require("violet-void.groups")
+  local lazy_plugins = require("lazy.core.config").plugins
+
+  -- Find plugins that aren't loaded yet
+  local pending = {}
+  for plugin, group_name in pairs(groups.plugins) do
+    if not lazy_plugins[plugin] then
+      goto continue
+    end
+
+    -- Check if plugin is loaded
+    local spec = lazy_plugins[plugin]
+    if not spec._loaded then
+      pending[plugin] = group_name
+    end
+
+    ::continue::
+  end
+
+  if vim.tbl_isempty(pending) then
+    return
+  end
+
+  -- Create autocmd group
+  local lazy_group = vim.api.nvim_create_augroup("VioletVoidLazyLoad", { clear = true })
+
+  -- Function to apply highlights for a plugin
+  local apply_plugin = function(plugin_name, group_name)
+    local plugin_groups = groups.get(group_name, colors, opts)
+    if vim.tbl_isempty(plugin_groups) then
+      return
+    end
+
+    for hl_name, hl_def in pairs(plugin_groups) do
+      vim.api.nvim_set_hl(0, hl_name, hl_def)
+    end
+  end
+
+  -- Set up LazyLoad autocmd for each pending plugin
+  vim.api.nvim_create_autocmd("LazyLoad", {
+    group = lazy_group,
+    callback = function(args)
+      local plugin_name = args.file
+      local group_name = pending[plugin_name]
+      if group_name then
+        apply_plugin(plugin_name, group_name)
+        pending[plugin_name] = nil
+
+        -- Clean up if all plugins are loaded
+        if vim.tbl_isempty(pending) then
+          vim.api.nvim_del_augroup_by_id(lazy_group)
+        end
+      end
+    end,
   })
 end
 

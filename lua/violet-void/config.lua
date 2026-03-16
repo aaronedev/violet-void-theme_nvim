@@ -48,6 +48,10 @@ M.defaults = {
     -- uses your plugin manager to automatically enable needed plugins
     -- currently only lazy.nvim is supported
     auto = true,
+    -- lazy-load plugin highlights when plugin is loaded
+    -- improves startup time for rarely-used plugins
+    -- requires lazy.nvim
+    lazy_load = false,
     -- add any plugins here that you want to enable
     -- for all possible plugins, see:
     -- * violet-void/groups/

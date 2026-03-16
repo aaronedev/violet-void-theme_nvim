@@ -109,6 +109,7 @@ Control which plugins get highlight groups:
 plugins = {
   all = true,           -- Enable all plugins (when not using lazy.nvim)
   auto = true,          -- Auto-detect plugins via lazy.nvim
+  lazy_load = false,    -- Defer plugin highlights until plugin loads
   -- Or specify individual plugins:
   telescope = true,
   gitsigns = true,
@@ -116,6 +117,8 @@ plugins = {
   neo-tree = false,
 }
 ```
+
+The `lazy_load` option improves startup time by only loading plugin highlight groups when the plugin is first loaded. This is especially useful for rarely-used plugins.
 
 ### Custom Colors
 
