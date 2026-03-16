@@ -253,6 +253,63 @@ lua/violet-void/
     └── ... (70+ integrations)
 ```
 
+## Screenshots
+
+### Color Palette
+
+**Violet Void (Dark)**
+```
+Background:  #0f0f0f  #0e0e0e  #1b1b1b
+Foreground:  #f0f0f5  #6a6a75
+Purple:     #bb7cff  #9d5cff  #7b4dff  #c490ff
+Blue:       #29adff  #70c8ff  #b6e3ff
+Cyan:       #00fff9
+Green:      #42ff97  #08bdba
+Magenta:    #fd7cff  #fd0098
+Red:        #ff004b  #ff1a67
+Orange:     #ff7c7e
+Comment:    #7a7a8a
+```
+
+**Void Light**
+```
+Background:  #f5f5f8  #eeeeef
+Foreground:  #1a1a22  #4a4a55
+Purple:      #7c3aed  #8b5cf6  #a78bfa
+Blue:        #0077cc  #0099e6
+```
+
+### Theme Variants
+
+| Variant | Use Case |
+|---------|----------|
+| `violet-void` | Default dark theme |
+| `void-light` | Light background |
+| `violet-void-high-contrast` | Accessibility / visual impairment |
+| `violet-void-colorblind` | Colorblind-friendly |
+
+### Plugin Support Highlights
+
+The theme provides dedicated highlights for 70+ plugins including:
+- **Telescope** - Fuzzy finder with purple accents
+- **Neotree** - File explorer with clear folder distinction
+- **Gitsigns** - Git integration with green adds / red deletes
+- **nvim-cmp** / **blink.cmp** - Completion with violet keywords
+- **Treesitter** - Syntax highlighting with consistent palette
+- **Lualine** - Statusline theming
+- **Noice** / **Notify** - UI notifications
+
+### Terminal Integration
+
+When enabled, the theme sets terminal colors for consistent Alacritty, iTerm2, Kitty, and other terminals:
+
+```
+Black   Red     Green   Yellow  Blue    Magenta Cyan    White
+#0f0f0f #ff004b #42ff97 #7c60d1 #29adff #fd7cff #00fff9 #f0f0f5
+```
+
+---
+
 ## Related Projects
 
 Part of the [Violet Void ecosystem](https://github.com/aaronedev/violet-void-theme).
