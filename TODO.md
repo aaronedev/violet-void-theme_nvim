@@ -43,7 +43,7 @@
   - [x] `styles.functions = { italic = true }`
   - [x] `styles.variables = {}`
 - [x] Add high-contrast variant for accessibility
-- [ ] Add colorblind-friendly variant
+- [x] Add colorblind-friendly variant - 6fe2604
 - [x] Support for custom color overrides per-filetype - 8668317
 
 ### Documentation

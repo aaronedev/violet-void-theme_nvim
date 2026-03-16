@@ -3,7 +3,7 @@ return {
   bg = "#0f0f0f",
   bg_dark = "#0e0e0e",
   bg_dark1 = "#1b1b1b",
-  bg_highlight = "#191919",
+  bg_highlight = "#1e1e22", -- Slightly lighter for better sidebar contrast
   blue = "#29adff",
   blue0 = "#70c8ff",
   blue1 = "#b6e3ff",
@@ -11,12 +11,12 @@ return {
   blue5 = "#00a8a4",
   blue6 = "#b4f9f8",
   blue7 = "#4b8afe",
-  comment = "#4c4c4c",
+  comment = "#7a7a8a", -- Lighter comment for WCAG AA compliance
   cyan = "#00fff9",
   dark3 = "#212121",
   dark5 = "#242424",
   fg = "#f0f0f5",
-  fg_dark = "#303030",
+  fg_dark = "#6a6a75", -- Medium gray for contrast against dark bg
   fg_gutter = "#313131",
   green = "#42ff97", -- green
   green1 = "#42ffad", -- green bright
